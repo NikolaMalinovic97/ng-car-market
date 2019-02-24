@@ -5,3 +5,7 @@
 input {
     width: 300px !important;
 }
+
+.active {
+    color: #349BFF !important;
+}

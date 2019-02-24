@@ -1,0 +1,14 @@
+<div class="card-deck">
+  <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let car of cars; let i = index">
+    <div class="card mt-5 text-white bg-primary" >
+      <img [src]="cars[i].imagePath" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title">{{ cars[i].title }}</h2>
+        <h3 class="card-title">{{ cars[i].year }}. {{ cars[i].price }}€</h3>
+        <hr>
+        <p class="card-text">{{ cars[i].description }}</p>
+        <a href="#" class="btn btn-primary">Check Details</a>
+      </div>
+    </div>
+  </div>
+</div>

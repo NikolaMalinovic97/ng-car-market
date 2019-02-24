@@ -1,0 +1,18 @@
+.card-body, .card-title, .card-text {
+    background: #f1f1f1 !important;
+    color: #111111;
+}
+
+.card {
+    border-width: 4px;
+    margin: auto;
+}
+
+img {
+    height: 300px;
+    object-fit: cover;
+}
+
+hr {
+    background: #349BFF;
+}
