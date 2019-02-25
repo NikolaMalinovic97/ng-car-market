@@ -3,9 +3,5 @@
 }
 
 input {
-    width: 300px !important;
-}
-
-.active {
-    color: #349BFF !important;
+    width: 250px !important;
 }
