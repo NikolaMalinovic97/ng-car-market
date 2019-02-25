@@ -44,4 +44,8 @@ export class CarsDataStorageService {
   getCarsData() {
     return this.carsData.slice();
   }
+
+  getCarData(id: number) {
+    return this.carsData[id];
+  }
 }

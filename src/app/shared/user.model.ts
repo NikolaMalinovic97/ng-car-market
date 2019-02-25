@@ -11,6 +11,10 @@ export class User {
         this.phone = phone;
     }
 
+    getUsername() {
+        return this.username;
+    }
+
     getPhone() {
         return this.phone;
     }

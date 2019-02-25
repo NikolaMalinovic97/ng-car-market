@@ -1,11 +1,15 @@
 .card-body, .card-title, .card-text {
-    background: #f1f1f1 !important;
+    background: #C3C2C9 !important;
     color: #111111;
 }
 
 .card {
     border-width: 4px;
     margin: auto;
+}
+
+.text-info-wrapper {
+    color: white !important;
 }
 
 img {

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <div>
+      <img [src]="car.imagePath" alt="car-picture" class="mt-5">
+      <div class="text-info-wrapper mt-5">
+        <h1 class="light-text text-center">{{ car.title }}</h1>
+        <h2 class="text-center">{{ car.price }}€</h2>
+        <ul class="list-group mt-5">
+          <li class="list-group-item"><h5>Username: {{ car.owner.getUsername() }}</h5></li>
+          <li class="list-group-item"><h5>Phone: {{ car.owner.getPhone() }}</h5></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 mt-5">
+      <ul class="list-group">
+        <li class="list-group-item"><h5>Year: {{ car.year }}</h5></li>
+        <li class="list-group-item"><h5>Fuel: {{ car.fuel }}</h5></li>
+        <li class="list-group-item"><h5>HP: {{ car.horsepower }}</h5></li>
+        <li class="list-group-item"><h5>Engine Size: {{ car.engineSize }}</h5></li>
+        <li class="list-group-item"><h5>Distance passed: {{ car.distance }}KM</h5></li>
+      </ul>
+      <ul class="list-group mt-5">
+        <li class="list-group-item"><h3>Description</h3></li>
+        <li class="list-group-item"><h5>{{ car.description }}</h5></li>
+      </ul>
+  </div>
+</div>
