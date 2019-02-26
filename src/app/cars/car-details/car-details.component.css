@@ -15,6 +15,11 @@ h5, h3 {
     background: whitesmoke;
 }
 
+ul {
+    border: 2px solid #349BFF;
+    border-radius: 3%;
+}
+
 .row {
     margin-bottom: 20px;
 }

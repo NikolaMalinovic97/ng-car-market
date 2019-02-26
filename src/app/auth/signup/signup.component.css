@@ -1,0 +1,11 @@
+form {
+    padding: 20px;
+}
+
+label {
+    color: #1f1f1f;
+}
+
+.col-xs-12, .form-group, label, input, form {
+    background-color: whitesmoke;
+}

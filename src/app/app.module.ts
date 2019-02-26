@@ -7,17 +7,21 @@ import { HeaderComponent } from './header/header.component';
 import { CarsListComponent } from './cars/cars-list/cars-list.component';
 import { CarDetailsComponent } from './cars/car-details/car-details.component';
 import { CarsDataStorageService } from './cars/cars-data-storage.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CarsListComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [CarsDataStorageService],
   bootstrap: [AppComponent]
