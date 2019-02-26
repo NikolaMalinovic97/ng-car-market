@@ -18,7 +18,6 @@ export class SignupComponent implements OnInit {
     const password = form.value.password;
     const username = form.value.username;
     const phone = form.value.phone;
-    console.log(mail + ' ' + password + ' ' + username + ' ' + phone);
     // Insert User authentication code here <--
   }
 }

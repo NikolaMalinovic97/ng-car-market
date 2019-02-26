@@ -9,6 +9,7 @@ import { CarDetailsComponent } from './cars/car-details/car-details.component';
 import { CarsDataStorageService } from './cars/cars-data-storage.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     CarsListComponent,
     CarDetailsComponent,
-    SignupComponent
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
