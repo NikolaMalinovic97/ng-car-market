@@ -11,6 +11,14 @@ export class User {
         this.phone = phone;
     }
 
+    getEmail() {
+        return this.email;
+    }
+
+    getPassword() {
+        return this.password;
+    }
+
     getUsername() {
         return this.username;
     }
