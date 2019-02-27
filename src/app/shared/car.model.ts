@@ -12,9 +12,8 @@ export class Car {
     public price: number;
     public owner: User;
 
-    constructor(title: string, year: number, fuel: string, horsepower: number,
-                engineSize: number, distance: number, imagePath: string,
-                description: string, price: number, owner: User) {
+    constructor(title: string, year: number, fuel: string, horsepower: number, engineSize: number, distance: number,
+                imagePath: string, description: string, price: number, owner: User) {
                     this.title = title;
                     this.year = year;
                     this.fuel = fuel;

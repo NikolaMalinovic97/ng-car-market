@@ -10,6 +10,7 @@ import { CarsDataStorageService } from './cars/cars-data-storage.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CarsDataStorageService],
+  providers: [CarsDataStorageService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
