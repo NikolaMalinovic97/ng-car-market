@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UsersDataStorageService } from '../users-data-storage.service';
 import { SignedUserService } from '../signed-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -11,7 +12,7 @@ import { SignedUserService } from '../signed-user.service';
 export class SigninComponent implements OnInit {
 
   constructor(private userDataStorage: UsersDataStorageService,
-               private signedUserService: SignedUserService) {}
+               private signedUserService: SignedUserService, private router: Router) {}
 
   ngOnInit() {
     this.userDataStorage.getAllUsers();
@@ -21,5 +22,8 @@ export class SigninComponent implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     this.signedUserService.onSignin(email, password);
+    if (this.signedUserService.isUserSigned()) {
+      this.router.navigate(['/']);
+    }
   }
 }
