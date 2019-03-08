@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { UsersDataStorageService } from '../users-data-storage.service';
+import { SignedUserService } from '../signed-user.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,14 +10,16 @@ import { NgForm } from '@angular/forms';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userDataStorage: UsersDataStorageService,
+               private signedUserService: SignedUserService) {}
 
   ngOnInit() {
+    this.userDataStorage.getAllUsers();
   }
 
   onSignin(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
-    // Insert User authentication code here <--
+    this.signedUserService.onSignin(email, password);
   }
 }
