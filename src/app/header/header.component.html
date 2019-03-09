@@ -27,9 +27,12 @@
       >
       <button class="btn btn-outline-primary my-2 my-sm-0" type="button">Search</button>
     </form>
-    <ul class="nav navbar-nav ">
-      <li><a href="" class="nav-link" routerLink="signup">Register</a></li>
-      <li><a href="" class="nav-link" routerLink="signin">Login</a></li>
+    <ul *ngIf="!userSigned" class="nav navbar-nav ">
+      <li><a class="nav-link" routerLink="signup">Register</a></li>
+      <li><a class="nav-link" routerLink="signin">Login</a></li>
+    </ul>
+    <ul *ngIf="userSigned" class="nav navbar-nav ">
+      <li><a class="nav-link" (click)="onLogout()">Logout</a></li>
     </ul>
   </div>
 </nav>

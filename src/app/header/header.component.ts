@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SignedUserService } from '../auth/signed-user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  userSigned = false;
+
+  constructor(private signedUserService: SignedUserService) { }
 
   ngOnInit() {
+    this.signedUserService.userChanged.subscribe(
+      (user) => {
+        this.userSigned = this.signedUserService.isUserSigned();
+      }
+    );
   }
 
+  onLogout() {
+    // <- insert code for loging out user
+  }
 }
