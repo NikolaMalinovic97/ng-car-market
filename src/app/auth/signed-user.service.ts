@@ -42,4 +42,9 @@ export class SignedUserService {
     return this.signedUser;
   }
 
+  logoutUser() {
+    this.signedUser = null;
+    this.userChanged.next(this.signedUser);
+  }
+
 }

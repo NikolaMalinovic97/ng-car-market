@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SignedUserService } from '../auth/signed-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   userSigned = false;
 
-  constructor(private signedUserService: SignedUserService) { }
+  constructor(private signedUserService: SignedUserService, private router: Router) { }
 
   ngOnInit() {
     this.signedUserService.userChanged.subscribe(
@@ -21,6 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogout() {
-    // <- insert code for loging out user
+    this.signedUserService.logoutUser();
+    this.router.navigate(['/']);
   }
 }
