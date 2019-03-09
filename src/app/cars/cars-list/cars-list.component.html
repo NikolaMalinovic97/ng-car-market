@@ -10,7 +10,7 @@
           <h3 class="card-title">{{ cars[i].year }}. {{ cars[i].price }}€</h3>
           <hr>
           <p class="card-text">{{ cars[i].description }}</p>
-          <a [routerLink]="[i,'details']" class="btn btn-primary">Check Details</a>
+          <a [routerLink]="['details', i]" class="btn btn-primary">Check Details</a>
         </div>
       </div>
     </div>

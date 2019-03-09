@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MyProfileComponent } from './auth/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     CarsListComponent,
     CarDetailsComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,

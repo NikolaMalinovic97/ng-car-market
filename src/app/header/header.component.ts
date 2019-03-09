@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SignedUserService } from '../auth/signed-user.service';
 import { Router } from '@angular/router';
 
@@ -7,14 +7,15 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   userSigned = false;
+  private subscription;
 
   constructor(private signedUserService: SignedUserService, private router: Router) { }
 
   ngOnInit() {
-    this.signedUserService.userChanged.subscribe(
+    this.subscription = this.signedUserService.userChanged.subscribe(
       (user) => {
         this.userSigned = this.signedUserService.isUserSigned();
       }
@@ -24,5 +25,9 @@ export class HeaderComponent implements OnInit {
   onLogout() {
     this.signedUserService.logoutUser();
     this.router.navigate(['/']);
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
